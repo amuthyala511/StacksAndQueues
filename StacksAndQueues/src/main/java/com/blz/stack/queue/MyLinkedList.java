@@ -38,4 +38,14 @@ public class MyLinkedList<K extends Comparable<K>> {
 		this.head = head.getNext();
 		return tempNode;
 	}
+
+	public void append(INode<K> myNode) {
+		if (this.tail == null && this.head == null) {
+			this.tail = myNode;
+			this.head = myNode;
+		} else {
+			this.tail.setNext(myNode);
+			this.tail = myNode;
+		}
+	}
 }
