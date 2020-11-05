@@ -18,4 +18,8 @@ public class StackOperation<K> {
 	public void printStack() {
 		myList.printMyNode();
 	}
+	
+	public INode<K> pop() {
+		return myList.head;
+	}
 }
